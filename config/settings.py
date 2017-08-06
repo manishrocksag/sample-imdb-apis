@@ -136,3 +136,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     )
 }
+
+ALLOWED_HOSTS = ['*']
