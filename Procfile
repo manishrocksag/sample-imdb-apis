@@ -1,0 +1,1 @@
+web: gunicorn gofynd.wsgi  --log-file -

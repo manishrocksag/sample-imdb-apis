@@ -1,0 +1,15 @@
+{
+
+    "name": "IMDB Movie APIs",
+
+    "description": "Self-hosted app",
+
+    "repository": "https://github.com/manishrocksag/sample-imdb-apis",
+
+    "scripts": {
+
+    "postdeploy": "python manage.py makemigrations && python manage.py migrate"
+
+  }
+
+}

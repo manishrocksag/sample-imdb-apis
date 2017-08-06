@@ -4,3 +4,4 @@ whitenoise==3.3.0
 django==1.10.5
 djangorestframework==3.6.2
 django-rest-swagger
+psycopg2
