@@ -1,6 +1,4 @@
 from rest_framework import generics
-from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Movie, Genre
 from .serializers import MovieSerializer, GenreSerializer
 

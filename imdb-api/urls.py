@@ -1,20 +1,17 @@
 from django.conf.urls import url
-from rest_framework.schemas import get_schema_view
-from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
-
 from . import views
+from rest_framework_swagger.views import get_swagger_view
 
-# Create our schema's view w/ the get_schema_view() helper method. Pass in the proper Renderers for swagger
-schema_view = get_schema_view(title='Movies API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
+schema_view = get_swagger_view(title='IMDB Movie APIs')
 
 urlpatterns = [
-    url(r'^', schema_view, name="docs"),
+    url(r'^$', schema_view, name="schema_view"),
     url(
-        r'^movies/$',
+        r'^movies$',
         views.MovieList.as_view()
     ),
     url(
-        r'^genres/$',
+        r'^genres$',
         views.GenreList.as_view()
     ),
 ]
