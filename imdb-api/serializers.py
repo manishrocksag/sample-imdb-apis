@@ -1,4 +1,4 @@
-from .models import Movie, Genre
+from .models import Movie, Genre, GenreMapping
 from rest_framework import serializers
 
 
@@ -12,5 +12,6 @@ class GenreSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Genre
         fields = ('id', 'name')
+
 
 

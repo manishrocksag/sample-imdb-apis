@@ -17,6 +17,10 @@ class Genre(models.Model):
 
 
 class GenreMapping(models.Model):
+    """
+    This table maps the relationship between movie and their genres.
+    One movie can have many genres.
+    """
     id = models.IntegerField(primary_key=True, auto_created=True)
     genre_id = models.ForeignKey('Genre')
     movie_id = models.ForeignKey('Movie')
