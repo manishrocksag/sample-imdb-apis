@@ -9,16 +9,6 @@ schema_view = get_schema_view(title='Movies API', renderer_classes=[OpenAPIRende
 
 urlpatterns = [
     url(r'^', schema_view, name="docs"),
-    url(r'^products/$', views.ProductList.as_view(), name='product-list'),
-    url(r'^products/(?P<product_id>[0-9]+)/$', views.ProductDetail.as_view()),
-    url(
-        r'^products/(?P<product_id>[0-9]+)/reviews/$',
-        views.ReviewList.as_view()
-    ),
-    url(
-        r'^products/(?P<product_id>[0-9]+)/reviews/(?P<review_id>[0-9]+)/$',
-        views.ReviewDetail.as_view()
-    ),
     url(
         r'^movies/$',
         views.MovieList.as_view()
