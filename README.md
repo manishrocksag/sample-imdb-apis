@@ -4,6 +4,13 @@ This project exposes apis to retrive
 movies. The movies can be searched through
 their names , genres, director name and popularity.
 
+The main application is imdb-api.
+
+To create initial data for the database from
+the imdb-api run python src/prepare_initial_data.py
+
+# List of APIs:
+
 /admin ~ reference to the admin site page where CRUD operations 
     can be performed on models.
     
